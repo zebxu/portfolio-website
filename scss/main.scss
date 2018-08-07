@@ -7,7 +7,7 @@
 
 body {
   @include background;
-  background: $primary-color;
+  // background: $primary-color;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -70,3 +70,5 @@ main {
     }
   }
 }
+
+@import 'mobile';

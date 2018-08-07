@@ -18,7 +18,7 @@ $menu-opacity: 0.9;
       background-size: cover;
       &:after {
         content: '';
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 100%;
@@ -27,5 +27,28 @@ $menu-opacity: 0.9;
         z-index: -1;
       }
     }
+  }
+}
+
+//Media Query Mixins
+@mixin mediaSM {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLG {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
