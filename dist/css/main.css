@@ -234,6 +234,25 @@ main {
     color: #000;
     background: #1aeea7; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .boxes h4 {
+    border: #000 solid 3px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    transition: all 0.5s ease-out; }
+    .boxes h4:hover {
+      padding: 1rem 2rem;
+      background: #1aeea7;
+      color: #fff; }
+      .boxes h4:hover .text-secondary {
+        color: #000; }
+
 @media screen and (min-width: 1171px) {
   .project-gallery {
     grid-template-columns: repeat(4, 1fr); } }
