@@ -11,7 +11,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.5;
 }
 
@@ -20,12 +20,13 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   &.lg-heading {
     font-size: 5rem;
   }
   &.sm-heading {
     // font-size: 1rem;
+    font-family: 'VT323', monospace;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: set-layover($primary-color);
@@ -44,6 +45,7 @@ header {
 }
 
 .text-secondary {
+  font-family: 'Pacifico', cursive;
   color: $secondary-color;
 }
 
@@ -59,7 +61,7 @@ main {
 
       &:hover {
         color: $secondary-color;
-        @include easeOut();
+        // @include easeOut();
       }
     }
   }
@@ -74,7 +76,7 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-areas:
     'img bio bio'
     'job1 job2 job3';
@@ -89,7 +91,7 @@ main {
   background-image: $portrait-image;
   background-size: cover;
   background-position: 8px -5px;
-  border-radius: 20%;
+  border-radius: 50%;
   border: 3px $secondary-color solid;
 }
 
@@ -110,6 +112,8 @@ main {
 .job {
   background: set-layover($primary-color);
   padding: 1rem;
+
+  // TODO add shadow
 }
 
 #main-footer {
@@ -176,10 +180,9 @@ main {
     font-size: 2rem;
     text-align: center;
     padding: 0.5rem 1rem;
-    margin: 1rem 0;
+    margin: 1rem 1rem;
     @include easeOut;
     &:hover {
-      padding: 1rem 2rem;
       background: $secondary-color;
       color: $primary-color;
       .text-secondary {
