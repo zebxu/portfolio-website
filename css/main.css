@@ -120,9 +120,6 @@ body {
       height: 100%;
       background: rgba(255, 255, 255, 0.9);
       z-index: -1; }
-  @media screen and (max-width: 500px) {
-    body#bg-img {
-      background-size: auto; } }
 
 h1,
 h2,
@@ -154,7 +151,7 @@ header {
   color: #1aeea7; }
 
 main {
-  padding: 4rem;
+  padding: 3rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -213,7 +210,7 @@ main {
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem; }
+  grid-gap: 2rem; }
   .project-gallery img {
     width: 100%;
     border: 3px solid #000; }
@@ -269,7 +266,8 @@ main {
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 2rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
@@ -297,7 +295,11 @@ main {
     grid-template-columns: 1fr 1fr; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main#home h1 {
+      margin-top: 10vh; }
   .project-gallery {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes span {
+    display: block; } }
