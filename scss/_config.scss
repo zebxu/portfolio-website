@@ -1,5 +1,6 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+$primary-color: #fff;
+// $primary-color: #fff;
+$secondary-color: #1aeea7;
 $show-home-image: true;
 $home-image: url(../img/background.jpeg);
 $portrait-image: url(../img/portrait.jpg);
@@ -27,6 +28,24 @@ $menu-opacity: 0.9;
         z-index: -1;
       }
     }
+  }
+}
+
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Set subtitle layover
+@function set-layover($color) {
+  @if (lightness($color) > 40) {
+    @return rgba(darken($primary-color, $amount: 8), 0.5);
+  } @else {
+    @return rgba(lighten($primary-color, $amount: 2), 0.5);
   }
 }
 
