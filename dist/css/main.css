@@ -86,7 +86,7 @@
 .nav-link {
   display: inline-block;
   position: relative;
-  font-size: 30px;
+  font-size: 2rem;
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: 300;
@@ -134,7 +134,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(235, 235, 235, 0.5); }
+    background: rgba(217, 217, 217, 0.5); }
 
 a {
   color: #000;
@@ -165,7 +165,7 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 1rem;
   grid-template-areas: 'img bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
 
@@ -192,15 +192,51 @@ main {
   grid-area: job3; }
 
 .job {
-  background: rgba(235, 235, 235, 0.5);
+  background: rgba(217, 217, 217, 0.5);
   padding: 1rem; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(235, 235, 235, 0.5);
+  background: rgba(217, 217, 217, 0.5);
   color: #000;
   height: 60px; }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  .project-gallery img {
+    width: 100%;
+    border: 3px solid #000; }
+    .project-gallery img:hover {
+      opacity: 0.8;
+      border-color: #1aeea7;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem; }
+  .btn i, .btn-light i, .btn-dark i {
+    margin-right: 0.1rem; }
+
+.btn-light {
+  background: rgba(217, 217, 217, 0.5); }
+  .btn-light:hover {
+    background: #1aeea7; }
+
+.btn-dark {
+  margin-top: 0.3rem;
+  background: #000;
+  color: #fff; }
+  .btn-dark:hover {
+    color: #000;
+    background: #1aeea7; }
+
+@media screen and (min-width: 1171px) {
+  .project-gallery {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -219,8 +255,7 @@ main {
       transform: translate(0, 0); }
   .menu-nav {
     height: 75vh;
-    transform: translate(100%);
-    font-size: 24px; }
+    transform: translate(100%); }
   .menu-branding {
     height: 25vh;
     transform: translate(-100%); }
@@ -229,8 +264,12 @@ main {
       height: 150px; }
   .about-info {
     grid-template: 'img' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .project-gallery {
+    grid-template-columns: 1fr 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .project-gallery {
+    grid-template-columns: 1fr; } }

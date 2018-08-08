@@ -43,7 +43,7 @@ $menu-opacity: 0.9;
 // Set subtitle layover
 @function set-layover($color) {
   @if (lightness($color) > 40) {
-    @return rgba(darken($primary-color, $amount: 8), 0.5);
+    @return rgba(darken($primary-color, $amount: 15), 0.5);
   } @else {
     @return rgba(lighten($primary-color, $amount: 2), 0.5);
   }
