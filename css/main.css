@@ -147,7 +147,6 @@ header {
   width: 100%; }
 
 .text-secondary {
-  font-family: 'Pacifico', cursive;
   color: #1aeea7; }
 
 main {
@@ -193,8 +192,12 @@ main {
   grid-area: job3; }
 
 .job {
+  border-bottom: #fff 5px solid;
   background: rgba(217, 217, 217, 0.5);
-  padding: 1rem; }
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease-out; }
+  .job:hover {
+    border-bottom: #1aeea7 5px solid; }
 
 #main-footer {
   text-align: center;
@@ -240,17 +243,19 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center; }
-  .boxes h4 {
+  .boxes p {
     border: #000 solid 3px;
     font-size: 2rem;
     text-align: center;
     padding: 0.5rem 1rem;
     margin: 1rem 1rem;
     transition: all 0.5s ease-out; }
-    .boxes h4:hover {
+    .boxes p .text-secondary {
+      font-family: 'Pacifico', cursive; }
+    .boxes p:hover {
       background: #1aeea7;
       color: #fff; }
-      .boxes h4:hover .text-secondary {
+      .boxes p:hover .text-secondary {
         color: #000; }
 
 @media screen and (min-width: 1171px) {
