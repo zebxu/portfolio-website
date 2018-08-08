@@ -1,0 +1,18 @@
+.container {
+  border: 1px solid black;
+  position: fixed; }
+  .container .box1,
+  .container .box2,
+  .container .box3 {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: solid 1px blue;
+    float: left; }
+  .container .box2 {
+    box-sizing: border-box;
+    background: red;
+    float: left; }
+  .container .box3 {
+    border: solid 1px green;
+    float: left; }

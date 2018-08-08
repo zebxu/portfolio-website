@@ -1,0 +1,294 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #000;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(90deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(-45deg) translate(-6px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      transform: rotate(45deg) translate(0px); }
+    .menu-btn.close .btn-line:nth-child(3) {
+      opacity: 0; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(235, 235, 235, 0.9);
+    list-style: none;
+    transform: translate(0, -100%);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate(0, 0); }
+  .menu-branding {
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translate(0, 100%);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate(0, 0); }
+    .menu-branding .portrait {
+      width: 200px;
+      height: 200px;
+      background-image: url(../img/portrait.jpg);
+      background-size: cover;
+      background-position: 8px -5px;
+      border-radius: 50%;
+      border: solid 3px #1aeea7; }
+
+.nav-item {
+  transform: translate(100%);
+  transition: all 0.5s ease-out; }
+  .nav-item.show {
+    transform: translate(0); }
+  .nav-item.current > a {
+    color: #1aeea7; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.5s ease-out; }
+  .nav-link:hover {
+    color: #1aeea7; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #fff;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/background.jpeg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: -1; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 5rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    font-family: 'VT323', monospace;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(217, 217, 217, 0.5); }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  font-family: 'Pacifico', cursive;
+  color: #1aeea7; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #1aeea7; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas: 'img bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-img {
+  grid-area: img;
+  width: 100%;
+  padding-top: 100%;
+  background-image: url(../img/portrait.jpg);
+  background-size: cover;
+  background-position: 8px -5px;
+  border-radius: 50%;
+  border: 3px #1aeea7 solid; }
+
+.bio {
+  grid-area: bio; }
+
+.job1 {
+  grid-area: job1; }
+
+.job2 {
+  grid-area: job2; }
+
+.job3 {
+  grid-area: job3; }
+
+.job {
+  background: rgba(217, 217, 217, 0.5);
+  padding: 1rem; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(217, 217, 217, 0.5);
+  color: #000;
+  height: 60px; }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  .project-gallery img {
+    width: 100%;
+    border: 3px solid #000; }
+    .project-gallery img:hover {
+      opacity: 0.8;
+      border-color: #1aeea7;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem; }
+  .btn i, .btn-light i, .btn-dark i {
+    margin-right: 0.1rem; }
+
+.btn-light {
+  background: rgba(217, 217, 217, 0.5); }
+  .btn-light:hover {
+    background: #1aeea7; }
+
+.btn-dark {
+  margin-top: 0.3rem;
+  background: #000;
+  color: #fff; }
+  .btn-dark:hover {
+    color: #000;
+    background: #1aeea7; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .boxes h4 {
+    border: #000 solid 3px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem;
+    transition: all 0.5s ease-out; }
+    .boxes h4:hover {
+      background: #1aeea7;
+      color: #fff; }
+      .boxes h4:hover .text-secondary {
+        color: #000; }
+
+@media screen and (min-width: 1171px) {
+  .project-gallery {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate(0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate(100%); }
+  .menu-branding {
+    height: 25vh;
+    transform: translate(-100%); }
+    .menu-branding .portrait {
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template: 'img' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  .project-gallery {
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .project-gallery {
+    grid-template-columns: 1fr; } }
