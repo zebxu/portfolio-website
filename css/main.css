@@ -146,7 +146,7 @@ header {
   width: 100%; }
 
 .bar {
-  height: 5vh;
+  height: 3vh;
   background: none;
   padding: 2rem 2rem;
   display: flex;
@@ -156,7 +156,7 @@ header {
   .bar.show-bar {
     background: #1aeea7;
     padding: 0 2rem;
-    height: 8vh; }
+    height: 5vh; }
 
 .text-secondary {
   color: #1aeea7; }
