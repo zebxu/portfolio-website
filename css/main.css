@@ -148,14 +148,14 @@ header {
 .bar {
   height: 5vh;
   background: none;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   transition: all 0.5s ease-out; }
   .bar.show-bar {
     background: #1aeea7;
-    padding: 0 4rem;
+    padding: 0 2rem;
     height: 8vh; }
 
 .text-secondary {
