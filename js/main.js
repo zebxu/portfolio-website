@@ -4,11 +4,30 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const bar = document.querySelector('.bar');
 
 // Set Initial State of Menu
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+
+var navbar = document.querySelector('.bar');
+var sticky = navbar.offsetTop;
+
+console.log('currentY:' + sticky);
+console.log('originalY' + navbar.offsetTop);
+
+function hideBar() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add('show-bar');
+  } else {
+    navbar.classList.remove('show-bar');
+  }
+}
+
+function showBar() {
+  // if document.body.scrollTop >
+}
 
 function toggleMenu() {
   if (!showMenu) {
